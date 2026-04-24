@@ -1,0 +1,36 @@
+.colorpalette{
+    /* border: 1px solid #000; */
+    width: 400px;
+    background-color: rgb(173, 148, 148);
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+}
+/* 選擇器之間的空格代表選取"裡面的"元素 */
+.colorpalette .color{
+    color: #fff; 
+    font-size: 18px;
+    font-family: "微軟正黑體";
+    font-weight: 800;
+    line-height: 2;
+    /* border: 1px solid #000; */
+    text-align: center;
+    margin: 0;
+}
+/* 選擇器直接連著寫代表"同時有class A 和 B"的元素 */
+/* EX: .color.color1 與 .color 指的是同一個，
+不同的是"權重" */
+.color.color1{
+    background-color: #372C4A;
+}
+.color2{
+    background-color: #4F3961;
+}
+.color3{
+    background-color: #EA728C;
+}
+.color4{
+    background-color: #FC9D9D;
+}
+.color5{
+    background-color: #F3D4D4;
+    height: 300px;
+}
