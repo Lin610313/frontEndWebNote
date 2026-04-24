@@ -1,0 +1,19 @@
+.outter{
+	height: 300px;
+	border: 1px solid #000;
+}
+.box{
+	width: 200px;
+	height: 200px;
+	background-color: #68a2ff;
+}
+
+/* 1. margin: 0 auto;  */
+
+/* 2. inline 系列 */
+
+/* 3. flex */
+
+/* 4. position: absolute; */
+
+/* 5. 文字的置中 */

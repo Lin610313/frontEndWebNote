@@ -1,0 +1,105 @@
+/* 若你有使用到中文需要的編碼宣告 */
+@charset "utf-8";
+
+/* 文件開頭說明 */
+/*
+ * Page name
+ * Copyright 2020
+ * Auther
+ * Licensed
+*/
+
+/* 目錄、區段的註解 */
+/* -------------------------- *\
+	Content
+\* -------------------------- */
+/**
+ * Content .............. You are reading it!
+ * Globel .............. Set common styles
+ * Layout .............. Set grid
+ * Components .............. Set components styles
+ * Pages .............. Set different page styles
+ * Utility .............. Set utility tools
+ */
+
+
+/* -------------------------- *\
+	Globel
+\* -------------------------- */
+*{
+
+}
+
+
+/* -------------------------- *\
+	Layout
+\* -------------------------- */
+.row{
+
+}
+.col{
+
+}
+
+
+/* -------------------------- *\
+	Components
+\* -------------------------- */
+/* btn */
+.btn{
+
+}
+
+/* nav */
+.nav{
+
+}
+
+/* navber */
+.navber{
+
+}
+.navbar .btn{
+
+}
+.navber .nav{
+
+}
+
+/* card */
+.card{
+	width: 100%;
+}
+
+/* product */
+.products{
+
+}
+.products .product-card{
+
+}
+
+/* footer */
+.footer .nav{
+
+}
+
+/* -------------------------- *\
+	Pages
+\* -------------------------- */
+/* homepage */
+.homepage .navbar .btn{
+
+}
+
+/* about */
+.about .navbar .btn{
+
+}
+
+/* -------------------------- *\
+	Utility
+\* -------------------------- */
+.clearfix{
+
+}
