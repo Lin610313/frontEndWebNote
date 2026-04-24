@@ -1,0 +1,39 @@
+Sublime 插件推薦、討論文章：
+http://edwardkuo.imas.tw/sublime/Sublime.html
+http://prototype-hacker.com/sublime/
+
+-- 其他常用編輯器推薦 --
+
+Atom：
+https://atom.io/
+
+VScode：
+https://code.visualstudio.com/
+
+-- 課程 --
+
+HTML 標籤 (W3C)：
+https://www.w3schools.com/tags/
+
+無結尾標籤 Singleton：
+https://www.thoughtco.com/html-singleton-tags-3468620
+
+CSS 選擇器 (W3C)：
+https://www.w3schools.com/cssref/css_selectors.asp
+
+Emmet 快速鍵表：
+https://docs.emmet.io/cheat-sheet/
+
+權重圖片說明：
+http://cssspecificity.com/
+
+-- 設計靈感 --
+
+色票靈感網站：
+http://colorhunt.co/
+
+Colors-canva's design：
+https://www.canva.com/colors/
+
+設計師必讀的色彩心理學：
+https://buzzorange.com/techorange/2017/08/10/blue-is-most-important-color-for-ui-design/
