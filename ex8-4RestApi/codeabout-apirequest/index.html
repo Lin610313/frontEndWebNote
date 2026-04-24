@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios@1.13.2/dist/axios.min.js"></script><!-- axios--CDN -->
+</head>
+<body>
+    <script>
+        //get todos
+        function getTodos(){
+            let resultElement = document.getElementById('result1');
+            resultElement.innerHTML = '';
+            axios.get('https://jsonplaceholder.typicode.com/todos')
+            .then(function(response){
+                console.log(response);
+                const todos = response.data;
+                resultElement.innerHTML = todos.map(function(todo){
+                    return(
+                        `<div>title: ${todo.title}</div>`
+                    );
+                }).join('');
+                
+            })
+            .catch(function(error){
+                console.log(error);
+            });
+        }
+        //get todo
+        function getTodo(){
+            let resultElement = document.getElementById('result2');
+            resultElement.innerHTML = '';
+            axios.get('https://jsonplaceholder.typicode.com/todos/1')
+            .then(function(response){
+                console.log(response);
+                const todo = response.data;
+                resultElement.innerHTML = `<div>title: ${todo.title}</div>`;
+            })
+            .catch(function(error){
+                console.log(error);
+            });
+        }
+        //post todo
+        function postTodo(){
+            let resultElement = document.getElementById('result3');
+            resultElement.innerHTML = '';
+            axios.post('https://jsonplaceholder.typicode.com/todos',{
+                title:"hello world",completed:true,userId:2})
+                .then(function(response){
+                    const todo = response.data;
+                    resultElement.innerHTML = `<div>title: ${todo.title}</div>`;
+                })
+            .catch(function(error){
+                console.log(error);
+            });
+        }
+        //update todo
+        function updateTodo(){
+            let resultElement = document.getElementById('result4');
+            resultElement.innerHTML = '';
+            axios.patch('https://jsonplaceholder.typicode.com/todos/1',{
+            title:"foobar",completed:false,userId:2})
+            .then((res)=>{
+                const todo = res.data;
+                if(todo.completed){
+                    resultElement.innerHTML = `<div>
+                    <div>title: ${todo.title}</div>
+                    <div>complete:Yes</div>
+                    </div>`;
+                }else{
+                    resultElement.innerHTML = `<div>
+                    <div>title: ${todo.title}</div>
+                    <div>complete:No</div>
+                    </div>`;
+                }
+                
+            })
+            .catch((err)=>{
+                console.log(err);
+            });
+        }
+        //delete todo
+        function deleteTodo(){
+            let resultElement = document.getElementById('result4');
+            resultElement.innerHTML = '';
+            axios.patch('https://jsonplaceholder.typicode.com/todos/1')
+            .then((res)=>{
+                console.log(res);
+            })
+            .catch((err)=>{
+                console.log(err);
+            })
+        }
+
+
+
+
+    </script>
+   <div><button onclick="getTodos()">Get todos</button></div>
+   <div id="result1"></div>
+   <div><button onclick="getTodo()">Get todo</button></div>
+   <div id="result2"></div>
+   <div><button onclick="postTodo()">Post todo</button></div>
+   <div id="result3"></div>
+   <div><button onclick="updateTodo()">Update todo</button></div>
+   <div id="result4"></div>
+   <div><button onclick="deleteTodo()">Delete todo</button></div>
+   <div id="result5"></div>
+</body>
+</html>
