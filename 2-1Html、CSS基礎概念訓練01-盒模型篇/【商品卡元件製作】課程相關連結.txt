@@ -1,0 +1,30 @@
+thumbnail 為一個有圖片以及文字等結構的元件，時常用於商品卡、文章封面、文章列表、簡介卡等等，參考：
+https://shopee.tw/mall/
+https://www.pinterest.com/
+https://medium.com/
+http://www.elle.com.tw/
+https://www.inside.com.tw/
+https://www.airbnb.com.tw/
+https://hahow.in/
+https://popmontreal.com/en/ -- 特殊 --
+https://www.gq.com.tw/
+https://recruit.japanmedical.jp/culture/
+https://www.melville-design.com/
+https://www.ayanomimi.com/
+
+漸層生成：
+https://www.cssmatic.com/gradient-generator
+
+-- 設計靈感 --
+
+免費商用圖庫：
+https://visualhunt.com/
+https://unsplash.com/
+https://pixabay.com/
+http://streetwill.co/
+https://www.freepik.com/
+
+-- 討論文章 --
+
+https://designmodo.com/web-design-cards/
+https://designschool.canva.com/blog/light-and-shadow/
