@@ -1,0 +1,111 @@
+/* Globel */
+*{
+	box-sizing: border-box;
+	/*border: 1px solid #000;*/
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+/* 為了讓高度上可以滿版 */
+html,body{
+	height: 100%;
+}
+h1,h2,p{
+	margin: 0;
+}
+
+/* 背景容器 */
+.wrapper{
+	height: 100%;
+	background-color: #ccc;
+	background: linear-gradient(#EF9FBF,#F9DED7);
+	overflow: hidden;
+}
+
+/* Product Card 設定 */
+.product{
+	width: 800px;
+	height: 540px;
+	background-color: #fff;
+	box-shadow: 0 20px 80px 0 rgba(0,0,0,0.5);
+	/* 水平居中 (display margin 去完成) 
+		1. display: block;
+		2. 要有寬度值設定
+		3. margin 水平方向 auto
+	*/
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 128px;
+
+	padding: 16px;
+	border-radius: 4px;
+}
+.product .info{
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	padding: 64px 56px;
+	background-color: #f9f9f9;
+	height: 100%;
+}
+.product .image{
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	height: 100%;
+	overflow:  hidden;
+}
+.product .image img{
+	height: 100%;
+	/*width: 100%;*/
+	display: block;
+}
+.product .name{
+	font-size: 100px;
+	font-weight: 300;
+	color: #444;
+	white-space: nowrap;/*不管如何都要超出範圍  */
+	margin-bottom: 16px;
+	text-shadow: 0 48px 10px rgba(0,0,0,0.05);
+
+	/* 定位元素與層級設定 */
+	position: relative;
+	z-index: 10;
+}
+.product .price{
+	font-size: 48px;
+	font-weight: 300;
+	color: #EA4C73;
+	margin-bottom: 16px;
+}
+.product .des{
+	font-size: 16px;
+	line-height: 24px;
+	color: #666;
+	margin-bottom: 16px;
+}
+.product .btn{
+	display: inline-block;
+	/* way 1 */
+	padding: 12px 40px;
+	line-height: 24px;
+	/* way 2 */
+	/*text-align: center;*/
+	/*width: 200px;*/
+	text-decoration: none;
+	font-size: 24px;
+	letter-spacing: 8px;
+	color: #fff;
+	box-shadow: 0 8px 40px 0 rgba(0,0,0,0.5); 
+	
+	background: rgba(250,195,209,1);
+	background: -moz-linear-gradient(45deg, rgba(250,195,209,1) 0%, rgba(250,105,146,1) 38%, rgba(230,120,149,1) 39%, rgba(234,76,116,1) 57%, rgba(234,76,116,1) 72%, rgba(250,195,209,1) 100%);
+	background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(250,195,209,1)), color-stop(38%, rgba(250,105,146,1)), color-stop(39%, rgba(230,120,149,1)), color-stop(57%, rgba(234,76,116,1)), color-stop(72%, rgba(234,76,116,1)), color-stop(100%, rgba(250,195,209,1)));
+	background: -webkit-linear-gradient(45deg, rgba(250,195,209,1) 0%, rgba(250,105,146,1) 38%, rgba(230,120,149,1) 39%, rgba(234,76,116,1) 57%, rgba(234,76,116,1) 72%, rgba(250,195,209,1) 100%);
+	background: -o-linear-gradient(45deg, rgba(250,195,209,1) 0%, rgba(250,105,146,1) 38%, rgba(230,120,149,1) 39%, rgba(234,76,116,1) 57%, rgba(234,76,116,1) 72%, rgba(250,195,209,1) 100%);
+	background: -ms-linear-gradient(45deg, rgba(250,195,209,1) 0%, rgba(250,105,146,1) 38%, rgba(230,120,149,1) 39%, rgba(234,76,116,1) 57%, rgba(234,76,116,1) 72%, rgba(250,195,209,1) 100%);
+	background: linear-gradient(45deg, rgba(250,195,209,1) 0%, rgba(250,105,146,1) 38%, rgba(230,120,149,1) 39%, rgba(234,76,116,1) 57%, rgba(234,76,116,1) 72%, rgba(250,195,209,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fac3d1', endColorstr='#fac3d1', GradientType=1 );
+}
