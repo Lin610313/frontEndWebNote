@@ -1,0 +1,106 @@
+/* ------------------------- *\
+	Globel
+\* ------------------------- */
+*{
+	box-sizing: border-box;
+	position: relative;
+}
+
+/* ------------------------- *\
+	Layout
+\* ------------------------- */
+
+/* container */
+/* 置中版型容器 */
+.container{
+	width: 992px;
+	margin: 0 auto;
+	display: block;
+	border: 1px solid #000;
+	height: 100%;
+	/* 取決於設計稿 */
+	/*padding-left: 16px;
+	padding-right: 16px;*/
+}
+/* 滿版型容器 */
+.container-fluid{
+	display: block;
+	border: 1px solid #000;
+	height: 100%;
+	width: 100%;
+}
+
+/* grid: row and column */
+.row{
+	border: 1px solid blue;
+	margin-left: -16px;
+	margin-right: -16px;
+}
+.row:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.row-collapse{
+	margin-left: 0;
+	margin-right: 0;
+}
+/* 分數表示型：三分之一 */
+.col-1-2,.col-1-3{
+	float: left;
+	border: 1px solid red;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+.col-1-2{
+	width: 50%;
+}
+.col-1-3{
+	width: 33.333333%;
+}
+
+/* if you 不想要中間的間隔 */
+.row-collapse .col-1-2,.col-1-3{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+/* ------------------------- *\
+	Component
+\* ------------------------- */
+
+/* navbar */
+.navbar{
+	height: 64px;
+	background-color: #ccc;
+	position: fixed;
+	
+	z-index: 999;
+	width: 100%;
+}
+/* jumbotron */
+.jumbotron{
+	height: 640px;
+	background-color: #7d7dc5;
+}
+/* hero */
+.hero{
+	padding-top: 80px;
+	padding-bottom: 80px;
+	border: 1px solid #000;
+}
+/* card */
+.card{
+	background-color: pink;
+	height: 480px;
+}
+.cmpt-1{
+	margin-bottom: 80px;
+}
+.cmpt-3{
+	margin-bottom: 80px;
+}
+.footer{
+	height: 160px;
+	background-color: #7d7dc5;
+}

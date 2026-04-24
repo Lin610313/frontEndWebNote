@@ -1,0 +1,101 @@
+/* Globel */
+*{
+	box-sizing: border-box;
+	position: relative;
+}
+
+/* ------------------------- *\
+	Layout
+\* ------------------------- */
+
+/* container */
+.container{
+	display: block;
+	margin: 0 auto;
+	width: 960px;
+
+	border: 1px solid #000;
+}
+
+/* inline-block */
+.row{
+	border: 1px solid #000;
+	background-color: #aacbff;
+}
+.col{
+	border: 1px solid #fff;
+	background-color: #2f66bc;
+	
+	width: 33.333333%;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+/* float */
+.float-row{
+	border: 2px solid blue;
+	background-color: #aacbff;
+}
+.float-row:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.float-col{
+	border: 1px solid #fff;
+	background-color: #2f66bc;
+
+	width: 33.333333%;
+	padding-left: 16px;
+	padding-right: 16px;
+	float: left;
+}
+.clearfix{
+	clear: both;
+}
+.footer{
+	background-color: #333;
+	height: 100px;
+}
+
+/* flex */
+.flex-row{
+	border: 2px solid orange;
+	background-color: #aacbff;
+
+	display: flex;
+	/*justify-content: space-between;*/
+	/*justify-content: space-around;*/
+	/*justify-content: flex-start;*/
+	/*justify-content: flex-end;*/
+}
+.flex-col{
+	border: 1px solid #fff;
+	background-color: #2f66bc;
+
+	padding-right: 16px;
+	padding-left: 16px;
+	/*width: 200px;*/
+}
+.flex-col-1{
+	width: 200px;	
+}
+.flex-col-2{
+	flex: 2;
+}
+.flex-col-3{
+	flex: 1;
+}
+
+/* ------------------------- *\
+	Component
+\* ------------------------- */
+
+/* card */
+.card{
+	height: 300px;
+	width: 100%;
+	background-color: pink;
+}

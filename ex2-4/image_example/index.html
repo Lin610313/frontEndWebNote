@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- 依照圖片屬性 -->
+	<h2>依照圖片原本的比例：</h2>
+	<div class="image-container">
+		<img src="images/potrait.jpg" alt="">
+	</div>
+	<div class="image-container">
+		<img src="images/landscape.jpg" alt="">
+	</div>
+	
+	<!-- Cover -->
+	<h2>用 background 屬性放置圖片(cover)：</h2>
+	<div class="bg-image" style="background-image: url('images/potrait.jpg');"></div>
+	<div class="bg-image" style="background-image: url('images/landscape.jpg');"></div>
+
+	<!-- Contain -->
+	<h2>用 background 屬性放置圖片(contain)：</h2>
+	<a href="#!" class="logo1">
+		<h1>公司的名稱</h1>
+	</a>
+	<a href="#!" class="logo2">
+		<img src="images/logo.svg" alt="公司的名稱">
+	</a>
+
+	<!-- 固定比例圖框 -->
+	<h2>固定的圖片框：</h2>
+	<div class="outter">
+		<div class="fm-image-container ratio-1-1">
+			<div class="image"></div>
+		</div>
+		<div class="fm-image-container ratio-2-3">
+			<div class="image"></div>
+		</div>
+		<div class="fm-image-container ratio-16-9">
+			<div class="image"></div>
+		</div>
+	</div>
+
+</body>
+</html>
