@@ -1,0 +1,82 @@
+@charset "utf-8";
+/*
+ * Page name
+ * Copyright 2020
+ * Author
+ * Licensed
+ */
+/* -------------------------- *\
+	Content
+\* -------------------------- */
+/**
+ * Content ............ You are reading it!
+ * Globel ............ Set common styles
+ * Layout ............ Set grid styles
+ * Component ............ Set component styles
+ */
+
+/* -------------------------- *\
+	Globel
+\* -------------------------- */
+*{
+	box-sizing: border-box;
+	position: relative;
+}
+html,body{
+	font-family: '微軟正黑體', arial;
+}
+h1,h2,h3,h4,h5,h6,p{
+	margin: 0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+
+
+/* -------------------------- *\
+	Layout
+\* -------------------------- */
+.container{
+	width: 1200px;
+	margin: 0 auto;
+	padding-left: 16px;
+	padding-right: 16px;
+	border: 1px solid #ccc;
+}
+.row{
+	border: 1px solid blue;
+	margin-left: -16px;
+	margin-right: -16px;
+}
+.row:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.col-1-2,.col-1-3,.col-1-4{
+	border: 1px solid red;
+	float: left;
+	padding-left: 16px;
+	padding-right: 16px;
+	height: 300px; /* 後面要記得拿掉，用不到 */
+}
+.col-1-2{
+	width: 50%;
+}
+.col-1-3{
+	width: 33.333333%;
+}
+.col-1-4{
+	width: 25%;
+}
+
+
+/* -------------------------- *\
+	Component
+\* -------------------------- */

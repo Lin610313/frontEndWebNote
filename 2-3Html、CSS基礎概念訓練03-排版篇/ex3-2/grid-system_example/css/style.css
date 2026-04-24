@@ -1,0 +1,117 @@
+/* Globel */
+*{
+	box-sizing: border-box;
+	position: relative;
+}
+
+/* Grid system */
+.container{
+	max-width: 1140px;
+	width: 100%;
+	border: 1px solid #000;
+	margin: 0 auto;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+/* option */
+/*@media screen and (max-width: 992px){
+	.container{
+		max-width: 720px;
+	}
+}
+@media screen and (max-width: 768px){
+	.container{
+		max-width: 540px;
+	}
+}*/
+
+.row{
+	border: 1px solid blue;
+	margin-left: -16px;
+	margin-right: -16px;
+}
+.row:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+/* 12 based grid system */
+/* 將原先的分數型表示改成以12為基底的表示 */
+/*.col-6{
+	border: 1px solid red;
+	float: left;
+	width: 50%;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+.col-4{
+	width: 33.3333333%;
+}
+.col-3{
+	width: 25%;
+}*/
+
+/* breakpoint 範例：分出不同大小的設備 */
+/* lg -(768px)- md -(540px)- sm */
+.col-lg-6,.col-lg-4,.col-lg-3,.col-lg-12,
+.col-md-6,.col-md-4,.col-md-3,.col-md-12,
+.col-sm-6,.col-sm-4,.col-sm-3,.col-sm-12{
+	border: 1px solid red;
+	float: left;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+.col-lg-3{
+	width: 25%;
+}
+.col-lg-4{
+	width: 33.3333333%;
+}
+.col-lg-6{
+	width: 50%;
+}
+.col-lg-12{
+	width: 100%;
+}
+@media screen and (max-width: 768px){
+	.col-md-3{
+		width: 25%;
+	}
+	.col-md-4{
+		width: 33.3333333%;
+	}
+	.col-md-6{
+		width: 50%;
+	}
+	.col-md-12{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 540px){
+	.col-sm-3{
+		width: 25%;
+	}
+	.col-sm-4{
+		width: 33.3333333%;
+	}
+	.col-sm-6{
+		width: 50%;
+	}
+	.col-sm-12{
+		width: 100%;
+	}
+}
+
+/* 作業：完成更複雜的格線，並抓出你的版型的格線系統 */
+/* xl -(1200px)- lg -(768px)- md -(540px)- sm -(375)- xs */
+/* type your setting here. */
+
+
+
+/* Component */
+.component{
+	height: 300px;
+	width: 100%;
+	background-color: skyblue;
+}
