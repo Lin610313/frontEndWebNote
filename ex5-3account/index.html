@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>記帳程式</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    .up{
+        color: red;
+    }
+    .down{
+        color: green;
+    }
+    .btn{
+        display:inline-block;
+        padding: 2px 3px;
+        border: 1px solid#000;
+    }
+
+</style>
+<body>
+    <h1>記帳程式</h1>
+    <input type="text" name="item" placeholder="品項">
+    <input type="number" name="cost" placeholder="金額">
+
+    <div class="container">
+        <div class="item">
+            <div class="btn delete">delete</div>
+            <span>小白菜</span>
+            <span>-30</span>
+            
+        </div>
+        <div class="item">
+            <div class="btn delete">delete</div>
+            <span>薪水</span>
+            <span>22000</span>
+            
+        </div>
+        <div class="item">
+            <div class="btn delete">delete</div>
+            <span>狀獎</span>
+            <span>500</span>
+            
+        </div>
+        <div class="item">
+            <div class="btn delete">delete</div>
+            <span>小白菜</span>
+            <span>-30</span>
+            
+        </div>
+    </div>
+    
+</body>
+<script>
+    document.querySelectorAll('.item span:last-child').forEach(node =>{
+        node.setAttribute('data-value', node.innerText);
+
+        if(Number(node.getAttribute('data-value')) > 0){
+            node.classList.add('up')
+        }else node.classList.add('down')
+    })
+
+    const node = document.querySelector('.container');
+    const newEle = document.createElement('div');
+    newEle.innerHTML = `
+        <div class = "btn delete">delete</div>
+        <span>青江菜</span>
+        <span class="down">-40</span>
+        
+    `
+    node.appendChild(newEle);
+
+    /*document.querySelector('.item span:last-child').addEventListener('click',(evt)=>{
+        console.log(evt.target)
+        evt.stopPropagation();
+    })
+    document.querySelector('.item').addEventListener('click',(evt)=>{console.log('test')})
+    */
+   /*
+   document.querySelectorAll('.btn.delete').forEach(ele => 
+        ele.addEventListener('click',()=>{console.log('test')})
+    )
+        */
+
+    document.querySelector('.container').addEventListener('click',(evt)=>{
+        if(evt.target.classList.contains('delete')){
+            evt.target.parentNode.parentNode.removeChild(evt.target.parentNode);
+        }
+    })
+
+
+    //document.querySelector('h1').addEventListener('click', evt =>console.log(evt))
+    //document.querySelector('h1').addEventListener('mousedown', evt =>console.log(evt))
+    //document.querySelector('h1').addEventListener('mouseup', evt =>console.log(evt))
+    //document.querySelector('h1').addEventListener('mouseover', evt =>console.log(evt))
+    //document.querySelector('h1').addEventListener('mouseenter', evt =>console.log(evt))
+    //document.querySelector('h1').addEventListener('mouseleave', evt =>console.log(evt))
+    //window.addEventListener('keypress', evt =>console.log(evt))
+    //window.addEventListener('keydown', evt =>console.log(evt))
+    //window.addEventListener('keyup', evt =>console.log(evt))
+    //window.addEventListener('resize', evt =>console.log(evt))
+    //window.addEventListener('scroll', evt =>console.log(evt))
+    //window.addEventListener('load', evt =>console.log(evt))
+
+    window.addEventListener('keydown', evt =>{
+        if(evt.key === "Enter"){
+            const inputs = document.querySelectorAll('input');
+            const html = `
+                <span>${inputs[0].value}</span>
+                <span class="${inputs[1].value > 0 ? 'up':'down'}">${inputs[1].value}</span>
+                <div class = "btn delete">delete</div>
+            `
+            const newEle = document.createElement('div');
+            newEle.classList.add('item'); 
+            newEle.innerHTML=html;
+            document.querySelector('.container').appendChild(newEle)
+        }
+    })
+
+
+
+
+
+</script>
+</html>
