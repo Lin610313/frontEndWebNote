@@ -1,0 +1,48 @@
+*{
+	position: relative;
+	box-sizing: border-box;
+}
+.box{
+	width: 300px;
+	height: 300px;
+	background-color: #000;
+}
+
+/* Media query */
+/* Desktop first 大螢幕到小螢幕 */
+/* max-width: 小於等於該條件則... */
+/*@media screen and (max-width: 768px){
+	.box{
+		background-color: yellow;
+	}
+}
+@media screen and (max-width: 540px){
+	.box{
+		background-color: pink;
+	}
+}
+@media screen and (max-width: 375px){
+	.box{
+		background-color: skyblue;
+	}
+}*/
+
+/* Mobile first 小螢幕到大螢幕 */
+/* min-width: 大於等於該條件則... */
+@media screen and (min-width: 375px){
+	.box{
+		background-color: pink;
+	}
+}
+@media screen and (min-width: 540px){
+	.box{
+		background-color: yellow;
+	}
+}
+
+/* 針對某個設備的設定: iphone X */
+@media screen and (width: 375px) and (height: 812px){
+	.box{
+		background-color: skyblue;
+	}
+}
