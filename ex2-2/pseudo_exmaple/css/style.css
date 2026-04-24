@@ -1,0 +1,43 @@
+.wrapper{
+	border: 2px solid #000;
+	height: 600px;
+	position: relative;
+}
+.box{
+	width: 100px;
+	height: 100px;
+	background-color: red;
+
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+/* 偽元素選擇器 */
+.box:before{
+	content: '123';
+	display: block;
+	background-color: yellow;
+}
+/* 與上面選到的偽元素相同 */
+/*.wrapper :before{ 
+	content: '789789'
+}*/
+.box:after{
+	content: '456';
+	display: block;
+	background-color: yellow;
+}
+
+/* 偽類選擇器 */
+.box:hover{
+	background-color: blue;
+}
+.box:active{
+	background-color: green;
+}
+
+/* 結合使用 */
+.box:hover:after{
+	background-color: orange;
+}

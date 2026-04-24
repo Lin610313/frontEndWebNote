@@ -1,0 +1,122 @@
+/* Globel */
+*{
+	box-sizing: border-box;
+	position: relative;
+}
+
+.section{
+	height: 600px;
+	/*border: 1px solid #000;*/
+}
+.section1{
+	background-color: #42a1f4;
+}
+.section2{
+	background-color: #333;
+}
+.section3{
+	background-color: #ddd;
+}
+
+/* Transition */
+.box{
+	width: 100px;
+	height: 100px;
+	background-color: #fff;
+
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+
+	border-radius: 50%;
+	/*transition: width 5s, height 2s, border-radius 2s;*/
+	transition: all 0.5s;
+}
+.section1:hover .box{
+	width: 100%;
+	height: 100%;
+	border-radius: 0;
+}
+
+/* Button 1 */
+.inner{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+.btn1{
+	display: inline-block;
+	background-color: #39e586;
+	padding: 0px 24px;
+	line-height: 48px;
+	color: #fff;
+	font-size: 18px;
+	text-decoration: none;
+	font-family: '微軟正黑體';
+	font-weight: 800;
+	border-radius: 4px;
+
+	border-bottom: 0px solid #279e5c;
+	transition: all 0.2s;
+}
+.btn1:hover{
+	border-bottom: 8px solid #279e5c;
+	transform: translate(0,-8px);
+}
+.btn1:active{
+	transform: translate(0,0);
+	border-bottom: 0px solid #279e5c;
+	background-color: #279e5c;
+	transition: all 0.05s;
+}
+
+/* Button 2 */
+.btn2{
+	/*border: 1px solid #000;*/
+	display: inline-block;
+	text-decoration: none;
+	font-size: 32px;
+	line-height: 80px;
+	color: #000;
+	font-family: '微軟正黑體';
+
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+
+	transition: all 0.3s;
+}
+.btn2:hover{
+	color: #ff0061;
+}
+.btn2:before{
+	content: '';
+	display: block;
+	width: 0;
+	height: 5px;
+	background-color: #ff0061;
+	position: absolute;
+	left: 0;
+	/* 另解 */
+	/*left: 50%;
+	transform: translate(-50%,0);*/
+	top: 0;
+	transition: all 0.3s;
+}
+.btn2:after{
+	content: '';
+	display: block;
+	width: 0;
+	height: 5px;
+	background-color: #ff0061;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	transition: all 0.3s;
+}
+.btn2:hover:before, .btn2:hover:after{
+	width: 100%;
+}

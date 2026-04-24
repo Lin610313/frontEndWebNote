@@ -1,0 +1,26 @@
+.wrapper{
+	border: 2px solid #000;
+	height: 600px;
+	position: relative;
+}
+.box{
+	width: 200px;
+	height: 100px;
+	background-color: red;
+
+	/* 變形屬性 */
+	/*transform: translate(100px,100px);*/
+	/*transform: translateX(100px);*/
+	/*transform: translateX(100px) translateY(100px);*/
+	/*transform: rotate(45deg);*/
+	/*transform: skew(45deg);*/
+	/*transform: scale(0.5);*/
+
+	/* transform、position 置中方式 */
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	    -ms-transform: translate(-50%,-50%);
+	        transform: translate(-50%,-50%);
+}
